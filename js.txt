@@ -1,0 +1,16 @@
+document.addEventListener("mousemove", (e) => {
+  const star = document.createElement("div");
+  star.classList.add("sparkle-star");
+
+  const size = 12;
+  star.style.left = `${e.clientX - size / 2}px`;
+  star.style.top = `${e.clientY - size / 2}px`;
+
+  const container = document.getElementById("sparkle-container");
+  container.appendChild(star);
+
+  setTimeout(() => {
+    star.remove();
+  }, 800);
+});
+
